@@ -4,7 +4,7 @@ Swords Dance grants Arceus-Normal the ability to double its Attack, allowing it 
 
 Various other coverage moves can be used in lieu of Shadow Claw or Stone Edge. Ice Beam takes out Mega Salamence after Stealth Rock, OHKOes the albeit rare Landorus-T, and can also 2HKO support Groudon. Overheat or Fire Blast can be used to blow Ferrothorn and Mega Scizor away, with Fire Blast also 2HKOing support Groudon thanks to Drought. Lastly, Shadow Force can be used to OHKO Arceus-Ghost and Giratina-O as well as block Defog, but bear in mind it is easy for the opponent to switch in something that resists or is immune to Ghost during the charge turn, and Lugia is also given a free turn to Roost back to full health and reactivate Multiscale.'''
 sentence = sentence.strip().lower()
-
+import pdb
 words = sentence.split(' ')
 word_count = {}
 for word in words:
@@ -13,8 +13,9 @@ for word in words:
     else:
         word_count[word]+=1
 #print sorted(word_count.keys())
-for key in sorted(word_count.keys()):
-    print key , word_count[key]
+print [n + ' '+str(word_count[n]) for n in sorted(word_count, key=word_count.get, reverse=True)]
+#print sorted(word_count.items(), reverse=True)
+#pdb.set_trace()    
 
 
 # BONUS
